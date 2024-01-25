@@ -14,5 +14,8 @@ values
 ('Gato', 'Miau'), 
 ('Pato', 'Cuack');
 
-
-select * from tbl_animal
+update  tbl_animal 
+set 
+nombre = 'Serpiente', 
+sonido = 'Sssss'
+where id = '2';
