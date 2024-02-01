@@ -26,4 +26,10 @@ create table tbl_compra_tickets
 
 
 
-delete from  tbl_animal where id is null;
+select  a.id, 
+        a.nombre as nombre_animal, 
+        a.sonido, 
+        b.nombre as nombre_zona 
+from tbl_animal a
+inner join tbl_zona_zoologico b 
+on a.id_zona = b.id
