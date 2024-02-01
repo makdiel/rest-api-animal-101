@@ -1,6 +1,16 @@
 import pg from 'pg-promise'
+import dotenv from 'dotenv';
+dotenv.config();
 const pgp = pg()
-const cnstr = `postgresql://postgres:Hola12@localhost:5432/api_zoologico`; 
+
+const user=process.env.USER;
+const pass = process.env.PASS;
+const dataBase = process.env.DB;
+const host = process.env.HOST;
+const portDb = process.env.PORT_DB;
+
+
+const cnstr = `postgresql://${user}:${pass}@${host}:${portDb}/${dataBase}`; 
 const db = pgp(cnstr);
 
 db.connect()

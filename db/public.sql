@@ -26,3 +26,4 @@ create table tbl_compra_tickets
 
 
 
+delete from  tbl_animal where id is null;
