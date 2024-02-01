@@ -1,21 +1,28 @@
 -- Active: 1698945600332@@127.0.0.1@5432@api_zoologico@public
+
+create table tbl_zona_zoologico
+(
+    id serial primary key, 
+    nombre varchar(200),
+    creado TIMESTAMP DEFAULT current_timestamp 
+)
+
 create table tbl_animal
 (
     id serial primary key ,
     nombre varchar(500), 
     sonido varchar(10),
+    id_zona int REFERENCES tbl_zona_zoologico(id),
     creado TIMESTAMP DEFAULT current_timestamp
 );
 
-insert into tbl_animal 
-(nombre, sonido)
-values
-('Perro', 'Wouf'),
-('Gato', 'Miau'), 
-('Pato', 'Cuack');
+create table tbl_compra_tickets
+(
+    id serial PRIMARY key,
+    nombre_comprador varchar(200),
+    precio numeric,
+    fecha_compra TIMESTAMP DEFAULT current_timestamp 
+);
 
-update  tbl_animal 
-set 
-nombre = 'Serpiente', 
-sonido = 'Sssss'
-where id = '2';
+
+
