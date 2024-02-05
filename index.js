@@ -1,6 +1,6 @@
 //const express = require('express');
 import express from 'express';
-import { animal } from './routes/apiAnimal.js'
+import { animal } from './routes/apiAnimal.js';
 import { zona } from './routes/apiZona.js';
 
 const app = express();

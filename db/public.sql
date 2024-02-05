@@ -1,5 +1,8 @@
 -- Active: 1698945600332@@127.0.0.1@5432@api_zoologico@public
 
+--drop table tbl_animal
+
+
 create table tbl_zona_zoologico
 (
     id serial primary key, 
